@@ -8,3 +8,12 @@
 .hero-art { width: 100%; }
 @media (min-width: 641px) and (max-width: 1000px) { .hero { grid-template-columns: minmax(0, 1.3fr) minmax(0, .85fr); } .hero-art { aspect-ratio: auto; } }
 @media (max-width: 360px) { .header { flex-wrap: wrap; } .header nav { width: 100%; justify-content: space-between; } h1 { font-size: 43px; } .button { gap: 18px; max-width: 100%; } }
+
+/* Frame the supplied artwork without changing the original image or its lettering. */
+.brand-logo{display:block;position:relative;overflow:hidden;width:clamp(300px,32vw,440px);aspect-ratio:4954/932;flex:none;line-height:0;letter-spacing:normal}
+.brand-logo img{position:absolute;display:block;width:110.88%;max-width:none;height:auto;left:-5.57%;top:-69.10%;mix-blend-mode:multiply}
+.footer{display:grid;grid-template-columns:minmax(0,1fr) auto auto}
+.footer .brand-logo{width:clamp(300px,32vw,420px)}
+@media(max-width:900px){.footer{grid-template-columns:minmax(0,1fr) auto}.footer .brand-logo{grid-column:1/-1;width:min(420px,100%)}}
+@media(max-width:640px){.header{flex-wrap:wrap;gap:20px;padding-block:22px}.header .brand-logo{width:min(420px,100%)}.header nav{width:100%;justify-content:flex-start;gap:24px}}
+@media(max-width:400px){.footer{grid-template-columns:minmax(0,1fr)}}
